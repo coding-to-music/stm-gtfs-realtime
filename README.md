@@ -6,8 +6,6 @@ https://github.com/coding-to-music/stm-gtfs-realtime
 
 https://stm-gtfs-realtime.vercel.app
 
-https://stm-gtfs-realtime.herokuapp.com
-
 by ansel brandt https://github.com/anselbrandt
 
 https://gtfs.vercel.app/
@@ -19,20 +17,20 @@ https://github.com/anselbrandt/stm-gtfs-realtime
 ```java
 // Expose environment variables to the browser by prefixing with NEXT_PUBLIC_
 
-export const APIKEY = process.env.NEXT_PUBLIC_APIKEY as string;
-export const MAPBOX_ACCESS_TOKEN = process.env
-  .NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN as string;
-export const IS_PROD = process.env.VERCEL_ENV === "production" ? true : false;
+STM_API_KEY=""
+MAPBOX_ACCESS_TOKEN=""
+```
 
-NEXT_PUBLIC_APIKEY=
-NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-NEXT_PUBLIC_GITHUB_CALLBACK=
-COOKIE_PASSWORD=
-NEXT_PUBLIC_GITHUB_GRAPHQL_PROXY=
-NEXT_PUBLIC_GITHUB_GIT_PROXY=
-SLACK_WEBHOOK=
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/stm-gtfs-realtime.git
+git push -u origin main
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -69,40 +67,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## GitHub
-
-```java
-git init
-git add .
-git remote remove origin
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:coding-to-music/stm-gtfs-realtime.git
-git push -u origin main
-```
-
-## Heroku
-
-```java
-heroku create stm-gtfs-realtime
-
-```
-
-## Heroku MongoDB Environment Variables
-
-```java
-heroku config:set
-
-heroku config:set MONGODB_URI="your value"
-```
-
-## Push to Heroku
-
-```java
-git push heroku
-
-# or
-
-npm run deploy
-```
